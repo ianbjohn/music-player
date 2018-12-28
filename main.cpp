@@ -62,9 +62,9 @@ int main(int argc, char** argv)
         SDL_PauseAudioDevice(device, 1);
 
         SDL_FreeWAV(start);
+        SDL_CloseAudioDevice(device);
     }
 
-    SDL_CloseAudioDevice(device);
     SDL_Quit();
     return 0;
 }
